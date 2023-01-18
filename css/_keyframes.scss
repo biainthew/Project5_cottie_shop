@@ -1,0 +1,21 @@
+@keyframes line {
+    0%{width: 0;}
+    100%{width: 169.31rem;}
+};
+@keyframes imgRotate {
+    0%{transform: rotate(0);}
+    50%{transform: rotate(45deg);}
+    100%{transform: rotate(0);}
+}
+@keyframes headerParallaxUp {
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-144rem);}
+}
+@keyframes headerParallaxDown144 {
+    0%{height: 100rem;}
+    100%{height: 144rem;}
+}
+@keyframes headerParallaxDown100 {
+    0%{transform: translateY(-144rem); height: 100rem;}
+    100%{transform: translateY(0); height: 100rem;}
+}
