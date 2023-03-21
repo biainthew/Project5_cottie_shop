@@ -1,0 +1,371 @@
+@import "font";
+@import "mixin";
+@import "keyframes";
+
+$body : #F0EDE6;
+
+html{
+    font-size: 1px;
+    overflow-x: hidden;
+}
+body{
+    background: $body;
+    cursor: url('../img/cursor-pointer.png'), auto;
+}
+a{
+    cursor: url('../img/cursor-pointer.png'), auto;
+}
+#header{
+    width: 100%;
+    height: 144rem;
+    &.headerParallaxUp{
+        background: $body;
+        animation: headerParallaxUp .5s ease-in-out forwards;
+    }
+    &.headerParallaxDown144{
+        background: $body;
+        animation: headerParallaxDown144 .5s ease-in-out forwards;
+    }
+    &.headerParallaxDown100{
+        background: $body;
+        animation: headerParallaxDown100 .5s ease-in-out forwards;
+    }
+}
+#main{
+    padding-top: 144rem;
+}
+.header{
+    position: fixed;
+    z-index: 999;
+    &-inner{
+        @include wh100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 70rem;
+        box-sizing: border-box;
+        &-logo{
+            width: 160rem;
+            height: 71rem;
+            a{
+                display: block;
+                @include wh100;
+                svg{
+                    @include wh100;
+                }
+            }
+        }
+        &-navwrap{
+            display: flex;
+            gap: 50rem;
+            .nav{
+                display: flex;
+                align-items: center;
+                position: relative;
+                >ul{
+                    display: flex;
+                    box-sizing: border-box;
+                    >li{
+                        position: relative;
+                        &:hover{
+                            >ul{
+                                display: block;
+                            }
+                        }
+                        >a{
+                            display: block;
+                            font-size: 24rem;
+                            padding: 15rem 30rem;
+                            font-weight: bold;
+                        }
+                        >ul{
+                            display: none;
+                            width: 100%;
+                            background: #000;
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            padding: 15rem 0;
+                            >li{
+                                >a{
+                                    display: block;
+                                    font-size: 18rem;
+                                    color: #fff;
+                                    padding: 10rem 27rem;
+                                    span{
+                                        font-weight: 500;
+                                        position: relative;
+                                        &::after{
+                                        content: "";
+                                        width: 0%;
+                                        height: 2px;
+                                        background: #fff;
+                                        position: absolute;
+                                        bottom: -10rem;
+                                        left: 0;
+                                        transition: .3s;
+                                        }
+                                        &:hover:after{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-dot{
+                    width: 7rem;
+                    height: 7rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0rem;
+                    transition: .3s;
+                    span{
+                        display: block;
+                        border-radius: 50%;
+                        background: #000;
+                        width: 0;
+                        height: 0;
+                        transition: .3s;
+                    }
+                }
+            }
+            >ul{
+                display: flex;
+                align-items: center;
+                gap: 20rem;
+                >li{
+                    >a{
+                        font-size: 24rem;
+                        font-weight: bold;
+                        position: relative;
+                        &:hover .line{
+                            animation: line .5s forwards;
+                        }
+                        // >svg{
+                        //     // display: none;
+                        // }
+                        .line{
+                            position: absolute;
+                            left: -10rem;
+                            bottom: -10rem;
+                        }
+                    }
+                    .fa-search{
+                        font-size: 30rem;
+                        &:hover .eye-opened{
+                            animation: eyeblink 2s infinite;
+                        }
+                        .eye{
+                            position: absolute;
+                            top: 9rem;
+                            left: 6rem;
+                        }
+                    }
+                }
+            }
+        }
+        &-small{
+            display: none;
+            gap: 20rem;
+            &-search{
+                i{
+                    font-size: 23rem
+                }
+            }
+            &-menu{
+                width: 30rem;
+                height: 20rem;
+                position: relative;
+                cursor: pointer;
+                span{
+                    display: block;
+                    position:absolute;
+                    width: 100%;
+                    height: 2.5rem;
+                    background: #000
+                }
+                .line1{
+                    top: 10%;
+                }
+                .line2{
+                    bottom: 10%;
+                }
+            }
+            &-bg{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: $body;
+                transition: .5s;
+                ul{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    li{
+                        a{
+                            font-size: 25rem;
+                            font-weight: bold;
+                            display: block;
+                            padding: 10rem 20rem;
+                                span{
+                                    position: relative;
+                                    &:after{
+                                    content: "";
+                                    position: absolute;
+                                    width: 0;
+                                    height: 1.5rem;
+                                    background: #000;
+                                    bottom: 0;
+                                    left: 0;
+                                    transition: .3s;
+                                    }
+                                    &:hover:after{
+                                        width: 100%;
+                                    }
+                                }
+                                
+                        }
+                    }
+                }
+                >a{
+                    position: absolute;
+                    bottom: 10%;
+                    span{
+                        font-size: 35rem;
+                        display: block;
+                        padding: 10rem 20rem;
+                    }
+                }
+                .header-inner-small-menu{
+                    width: 35rem;
+                    height: 35rem;
+                    float: right;
+                    top: 50rem;
+                    right: 50rem;
+                    .line1{
+                        transform: rotate(45deg);
+                        top: 50%;
+                    }
+                    .line2{
+                        transform: rotate(-45deg);
+                        top: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+.main{
+    margin: 0 100rem;
+    padding: 0 30rem;
+    box-sizing: border-box;
+    &-sec1{
+        h1{
+            font-size: 127rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 90rem;
+        }
+        &-imgwrap{
+            position: relative;
+            top: -90rem;
+            z-index: -1;
+            width: 1014rem;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+        &-textwrap{
+            p{
+                font-size: 20rem;
+                text-align: center;
+                font-weight: 500;
+            }
+            a{
+                @include discover;
+            }
+        }
+        &-layer{
+            position: absolute;
+            &:hover{
+                animation: imgRotate 1s infinite linear;
+            }
+            img{
+                width: 175rem;
+            }
+        }
+        &-layer1{
+            top: 100rem;
+            left: 50%;
+            margin-left: -446rem;
+        }
+        &-layer2{
+            top: 540rem;
+            left: 50%;
+            margin-left: 650rem;
+        }
+        &-layer3{
+            top: 660rem;
+            left: 50%;
+            margin-left: -805rem;
+        }
+    }
+    &-sec2{
+        h1{
+            font-size: 90rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50rem;
+        }
+        &-cont{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            &-img{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+            &-text{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 70rem;
+                img{
+                    width: 35%;
+                    display: block;
+                    margin: 0 auto;
+                }
+                p{
+                    font-size: 20rem;
+                    font-weight: 500;
+                    text-align: center
+                }
+                a{
+                    @include discover;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    marquee{
+        margin: 100px 0 200px;
+        i{
+            font-size: 80rem;
+            margin-right: 60rem;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+}
+
+@import "media";

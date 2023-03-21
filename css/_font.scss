@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Thin.otf);
+    font-weight: 100;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Light.otf);
+    font-weight: 300;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Regular.otf);
+    font-weight: 400;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+    font-weight: 500;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Bold.otf);
+    font-weight: 700;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url(../font/Noto_Sans_KR/NotoSansKR-Black.otf);
+    font-weight: 900;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../font/Libre_Baskerville/LibreBaskerville-Bold.ttf);
+    font-weight: 700;
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../font/Libre_Baskerville/LibreBaskerville-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../font/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+    font-weight: 400;
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+body{
+    font-family: 'Libre Baskerville','Noto Sans KR';
+}

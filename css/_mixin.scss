@@ -1,0 +1,45 @@
+@mixin wh100 {
+    width: 100%;
+    height: 100%;
+}
+@mixin discover {
+    position: relative;
+    width: 210rem;
+    height: 70rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50rem;
+    text-align: center;
+    line-height: 70rem;
+    &:hover{
+        cursor: url('../img/cursor_hand_resize.png') ,auto !important;
+    }
+    &:hover::before{
+        display: block;
+    }
+    &::before{
+        content: "";
+        background: url(../img/button-basic-fill.svg) no-repeat;
+        position: absolute;
+        @include wh100;
+        z-index: -1;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+        display: none;
+    }
+    &::after{
+        content: "";
+        background: url(../img/button-basic-stroke.svg) no-repeat;
+        position: absolute;
+        @include wh100;
+        z-index: -1;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+    }
+    span{
+        font-size: 20rem;
+        cursor: url('../img/cursor_hand_resize.png') ,auto !important;
+    }
+}
